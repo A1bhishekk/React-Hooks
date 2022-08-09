@@ -1,34 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { createContext } from "react";
+import ChildA from "./components/ChildA";
+import "./App.css";
+import Parent from "./components/Parent";
+import Hooks from "./Hooks/Hooks";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export const data = createContext();
+export const data1 = createContext();
+const App = () => {
+  const name = "Abhishek Kumar";
+  const age = 24;
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+    <>
+      <data.Provider value={name}>
+        <data1.Provider value={age}>
+          <h1>What is Context API?</h1>
+          <p>
+            The React Context API is a way for a React app to effectively
+            produce global variables that can be passed around. This is the
+            alternative to "prop drilling" or moving props from grandparent to
+            child to parent, and so on. Context is also touted as an easier,
+            lighter approach to state management using Redux.
+          </p>
+          <ChildA />
+          <Parent />
+        </data1.Provider>
+      </data.Provider>
+      <Hooks />
+    </>
+  );
+};
 
-export default App
+export default App;
