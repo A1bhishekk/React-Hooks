@@ -23,7 +23,9 @@ h2{
   background-color: goldenrod;
   color: rgb(239, 9, 109);
   text-align: center;
-  /* margin: 20px; */
+  padding: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 h3{
   color: aquamarine;

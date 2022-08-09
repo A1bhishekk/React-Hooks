@@ -14,6 +14,7 @@ const ContextApi = () => {
     
       <data.Provider value={name}>
         <data1.Provider value={age}>
+          <h2>Context API</h2>
           <h1>What is Context API?</h1>
           <p>
             The React Context API is a way for a React app to effectively

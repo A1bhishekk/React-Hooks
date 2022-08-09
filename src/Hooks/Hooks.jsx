@@ -1,7 +1,12 @@
 import React from 'react'
 import { createContext } from 'react'
+import UseCallBack from './UseCallBack';
 import UseContext from './UseContext';
 import UseEffect from './UseEffect';
+import UseLayoutEffect from './UseLayoutEffect';
+import UseMemo from './UseMemo';
+import UseReducer from './UseReducer';
+import USeRef from './USeRef';
 import UseState from './UseState'
 
 export const data=createContext();
@@ -15,6 +20,11 @@ const Hooks = () => {
     </data.Provider>
     <UseState/>
     <UseEffect/>
+    <UseReducer/>
+    <UseCallBack/>
+    <UseMemo/>
+    <USeRef/>
+    <UseLayoutEffect/>
     </>
   )
 }
