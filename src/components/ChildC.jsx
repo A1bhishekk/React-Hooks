@@ -1,5 +1,5 @@
 import React from 'react'
-import { data,data1 } from '../App'
+import { data,data1 } from '../ContextApi'
 
 const ChildC = () => {
   return (

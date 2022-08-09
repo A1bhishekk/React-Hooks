@@ -1,5 +1,5 @@
 import React from 'react'
-import { data } from '../App'
+import { data } from '../ContextApi'
 import Parent1 from './Parent1'
 
 const Parent = () => {
